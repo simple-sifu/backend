@@ -1,7 +1,9 @@
 const http = require('http');
 
-const server = http.createServer(() =>{
-    console.log('I hear you!. thanks for the request !')
+const server = http.createServer((request, response) =>{
+    response.setHeader('Content-Type', 'text/html');
+    response.end('<h1>Helllooooo</h1>')
+
 })
 
 server.listen(3000);
