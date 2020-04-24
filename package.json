@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/simple-sifu/backend/issues"
   },
-  "homepage": "https://github.com/simple-sifu/backend#readme"
+  "homepage": "https://github.com/simple-sifu/backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
