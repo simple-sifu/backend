@@ -1,4 +1,5 @@
 var express = require('express');
+var moment = require('moment');
 var app = express();
 
 var port = process.env.PORT || 3000;
@@ -8,6 +9,11 @@ app.use('/assets', express.static(__dirname + '/public'));
 app.use('/', function(req, res, next){
     console.log('Request Url: ' + req.url);
     next();
+})
+
+app.use(function (req, res, next) {
+    console.log('Time: %s', moment().format('MMMM Do YYYY, h:mm:ss a'))
+    next()
 })
 
 app.get('/', function(req, res){
